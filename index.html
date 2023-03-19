@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C&P Wedding</title>
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header>
+		<div class="title">Chaewon & Pawel</div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#details">Directions</a></li>
+				<li><a href="#rsvp">RSVP</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="hero">
+			<div class="image">
+				<img src="https://images.unsplash.com/photo-1520886272478-69aed2b3685b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="Image Description">
+			</div>
+			<div class="content">
+				<h1>We are getting married!
+				<span id="again">again ;)</span></h1>
+				<p>Join us on our special day <br/><span id="day-counter"></span>.</p>
+				<a href="#rsvp" class="button">RSVP Now</a>
+			</div>
+		</section>
+		<section id="details">
+			<h2>Wedding Details</h2>
+			<p>Here's everything you need to know about our special day.</p>
+			<h3>
+				Date and time
+			</h3>
+			 <h4>
+				June 10, 2023 <br/>
+				4:00 PM
+			 </h4>
+			 <h3>Wedding Ceremony</h3>
+				Sanktuarium Matki Bożej Przebaczenia, Biechowo
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4885.14511600343!2d17.538800680397653!3d52.25114713727263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704e7d75b86bd53%3A0x85ee843cc4b7338e!2sKlasztor%20OO.%20Paulin%C3%B3w!5e0!3m2!1sen!2sde!4v1679187877335!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+			 <h3>Wedding Reception</h3>
+				Pałac na Opieszynie, Września
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.713270448242!2d17.5655612163222!3d52.32120525869445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704e970d63745cd%3A0x374b410b24567a95!2sPalace%20on%20Opieszynie!5e0!3m2!1sen!2sde!4v1679188219642!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+		<section id="rsvp">
+			<h2>RSVP</h2>
+			<p>Please let us know if you can make it to our wedding.</p>
+			<form>
+				<label for="name">Name:</label>
+				<input class="input" type="text" id="name" name="name" placeholder="Name" required>
+				<label for="guests">Number of Guests:</label>
+				<input class="input" type="text" id="guests" name="guests">
+				<label for="message">Message:</label>
+				<textarea class="input" name="message" id="message" cols="30" rows="4" placeholder="Message (optional)"></textarea>
+				<input type="submit" value="Submit" class="button">
+			</form>
+		</section>
+	</main>
+	<script type="text/javascript">
+		const theDate = new Date('June 10, 2023')
+		
+		const today = new Date()
+		
+		const diffTime = Math.abs(theDate - today)
+		const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+		
+		let text = ''
+		if (diffDays > 0) {
+			if (diffDays > 1) {
+				text = `in ${diffDays} days`
+			} else {
+				text = "tomorrow"
+			}
+		}
+		document.getElementById('day-counter').innerHTML = text
+	
+		window.addEventListener("scroll", function() {
+  var header = document.querySelector("header")
+  var scrollPosition = window.scrollY
+
+  if (scrollPosition > 100) { /* Change 100 to the desired scroll position */
+    header.classList.add("smaller")
+  } else {
+    header.classList.remove("smaller")
+  }
+})
+
+	</script>
+</body>
+</html>
