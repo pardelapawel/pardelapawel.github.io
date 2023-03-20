@@ -50,7 +50,8 @@
 		<section id="rsvp">
 			<h2>RSVP</h2>
 			<p>Please let us know if you can make it to our wedding.</p>
-			<form>
+			<form action="https://api.web3forms.com/submit" method="POST">
+				<input type="hidden" name="access_key" value="0efb20f4-8a16-457f-856b-b5fe764a3430">
 				<label for="name">Name:</label>
 				<input class="input" type="text" id="name" name="name" placeholder="Name" required>
 				<label for="guests">Number of Guests:</label>
