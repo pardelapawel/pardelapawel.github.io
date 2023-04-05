@@ -1,0 +1,25 @@
+{
+  "name": "C&P wedding",
+  "version": "3.2.0",
+  "watch": {
+    "build": {
+      "patterns": ["i18n/index.html"],
+      "verbose": true,
+      "delay": 2500,
+      "ignore": ["build"]
+    }
+  },
+  "scripts": {
+    "2build": "echo foo",
+    "build": "(tailwindcss -i ./css/main.css -o ./i18n/main.css && static-i18n --fileFormat yml -l en -i en -i pl . --files index.html -o i18n)",
+    "start": "nodemon --exec 'npm run build' --watch package.json --watch css/main.css --watch index.html"
+
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "npm-watch": "^0.11.0",
+    "watch": "^1.0.2"
+  }
+}

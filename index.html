@@ -1,94 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>C&P Wedding</title>
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="data.js"></script>
-</head>
-<body>
-	<header>
-		<div id="names" class="title">Chaewon & Pawel</div>
-		<nav>
-			<ul>
-				<li><a id="homeNav" href="#">Home</a></li>
-				<li><a id="directionsNav" href="#details">Directions</a></li>
-				<li><a id="rsvpNav" href="#rsvp">RSVP</a></li>
-				<li>
-					<ul>
-						<li id="languageOverlay"><span id="languageNav">Language</span></li>
-						<li><span class='lang pl' onclick="overwriteLanguage('pl')">PL</span></li>
-						<li><span class='lang kr' onclick="overwriteLanguage('kr')">KR</span></li>
-						<li><span class='lang en' onclick="overwriteLanguage('en')">EN</span></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section id="hero">
-			<div class="image">
-				<img src="public/us_color.png" alt="Image of us">
-			</div>
-			<div class="content">
-				<h1 id="title">We are getting married!</h1>
-				<span id="again">again ;)</span>
-				<p id="joinUs">Join us on our special day </p>
-				<p id="day-counter"></p>
-				<a id="rsvpButton" href="#rsvp" class="button">RSVP Now</a>
-			</div>
-		</section>
-		<section id="details">
-			<h2 id="detailsSection">Wedding Details</h2>
-			<p id="detailsIntro">Here's everything you need to know about our special day.</p>
-			<h3 id="dateTitle">
-				Date and time
-			</h3>
-			 <h4 id="date">
-				June 10, 2023
-			 </h4>
-			 <h4 id="time">
-				4:00 PM
-			 </h4>
-			 <h3 id="ceremony">Wedding Ceremony</h3>
-				<p id="ceremonyText">Sanktuarium Matki Bożej Przebaczenia, Biechowo</p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4885.14511600343!2d17.538800680397653!3d52.25114713727263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704e7d75b86bd53%3A0x85ee843cc4b7338e!2sKlasztor%20OO.%20Paulin%C3%B3w!5e0!3m2!1sen!2sde!4v1679187877335!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
-			 <h3 id="reception">Wedding Reception</h3>
-				<p id="receptionText">Pałac na Opieszynie, Września</p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.713270448242!2d17.5655612163222!3d52.32120525869445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704e970d63745cd%3A0x374b410b24567a95!2sPalace%20on%20Opieszynie!5e0!3m2!1sen!2sde!4v1679188219642!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</section>
-		<section id="rsvp">
-			<h2 id="rsvpSection">RSVP</h2>
-			<p id="rsvpText">Please let us know if you can make it to our wedding.</p>
-			<form action="https://api.web3forms.com/submit" method="POST">
-				<input type="hidden" name="access_key" value="0efb20f4-8a16-457f-856b-b5fe764a3430">
-				<label id="rsvpName" for="rsvpNameText">Name:</label>
-				<input class="input" type="text" id="rsvpNameText" name="name" placeholder="Name" required>
-				<label id="rsvpGuests" for="rsvpGuestsText">Number of Guests:</label>
-				<input class="input" type="text" id="rsvpGuestsText" name="rsvpGuestsText">
-				<label id="message" for="messageText">Message:</label>
-				<textarea class="input" name="messageText" id="messageText" cols="30" rows="4" placeholder="Message (optional)"></textarea>
-				<input id="submit" type="submit" value="Submit" class="button">
-			</form>
-		</section>
-	</main>
-	<script type="text/javascript">
-langCookieKey = "chaewon_pawel_language";
-userLang =
-    localStorage.getItem(langCookieKey) ||
-    navigator.language ||
-    navigator.userLanguage ||
-    "en";
-  userLang = userLang.split("-")[0];
-  if (!["en", "pl", "kr"].includes(userLang)) {
-    userLang = "en";
-  }
-	</script>
-	<script src="script.js"></script>
-	<script type="text/javascript">
-		overwriteLanguage(userLang);
-	</script>
-</body>
+  <head>
+    <title>C&P Wedding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body class="text-gray-700">
+    <header class="text-center">
+      <div id="flowerTop" class="bg-blue-200 h-44 my-14"></div>
+      <h1 class="uppercase text-6xl my-5 tracking-widest" data-t>names</h1>
+      <div class="uppercase inline-block text-lg/8 tracking-widest">
+        <p class="inline mx-1" data-t>date</p>
+        <p class="inline mx-1" data-t>•</p>
+        <p class="inline mx-1" data-t>city</p>
+        <div id="day-counter" class="center"></div>
+      </div>
+    </header>
+    <nav class="mt-16">
+      <ul class="flex gap-10 justify-center text-lg italic">
+        <li><a href="" data-t>nav.home</a></li>
+        <li><a href="" data-t>nav.story</a></li>
+        <li><a href="" data-t>nav.rsvp</a></li>
+        <li><a href="" data-t>nav.en</a></li>
+        <li><a href="" data-t>nav.pl</a></li>
+        <li><a href="" data-t>nav.kr</a></li>
+      </ul>
+    </nav>
+    <script>
+      langCookieKey = "chaewon_pawel_language";
+      userLang =
+        localStorage.getItem(langCookieKey) ||
+        navigator.language ||
+        navigator.userLanguage ||
+        "en";
+      userLang = userLang.split("-")[0];
+      if (!["en", "pl", "kr"].includes(userLang)) {
+        userLang = "en";
+      }
+      const theDate = new Date("June 10, 2023");
+      const today = new Date();
+      const diffTime = Math.abs(theDate - today);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      let text = "";
+      if (diffDays >= 0) {
+        if (diffDays > 1) {
+          text = {
+            en: `${diffDays} days to go!`,
+            pl: `jeszcze ${diffDays} dni!`,
+            kr: `${diffDays} 일 후!`,
+          }[userLang];
+        } else if (diffDays == 0) {
+          text = { en: "today", pl: "dziś", kr: "오늘" }[userLang];
+        } else {
+          text = { en: "tomorrow", pl: "jutro", kr: "내일" }[userLang];
+        }
+      }
+      document.getElementById("day-counter").innerHTML = text;
+    </script>
+  </body>
 </html>
