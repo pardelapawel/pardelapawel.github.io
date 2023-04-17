@@ -1,7 +1,11 @@
 ---
+language_name: en
 names: Chaewon & Paweł
+initials: C&P
 date: June 10th, 2023
-city: Września, Poland
+date_noComma: June 10th 2023
+address: Września, Poland
+address_noComma: Września Poland
 nav:
   home: Home
   story: Our Story

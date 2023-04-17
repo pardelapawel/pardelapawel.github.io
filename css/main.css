@@ -1,6 +1,35 @@
 body {
   font-family: "EB Garamond", serif;
 }
+section {
+  padding: 2rem 1rem;
+  width: 100%;
+  /* background-color: beige;
+  outline: 2px solid brown; */
+}
+
+.cover {
+  height: 450px;
+  width: 100%;
+}
+
+.poi {
+  padding: 2rem;
+}
+
+.timeline .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.timeline .container img {
+  /* height: 300px; */
+  max-width: 300px;
+  /* object-fit: cover; */
+}
 
 
 @tailwind base;

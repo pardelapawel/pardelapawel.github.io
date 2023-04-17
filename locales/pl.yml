@@ -1,27 +1,26 @@
+---
+language_name: pl
 names: Chaewon i Paweł
-homeNav: Strona główna
-directionsNav: Szczegóły
-rsvpNav: RSVP
-title: Pobieramy się!
-again: jeszcze raz
-joinUs: Dołącz do nas w naszym wyjątkowym dniu
-rsvpButton: Potwierdź obecność
-detailsSection: Szczegóły ślubu
-detailsIntro: Oto wszystko, co musisz wiedzieć o naszym wyjątkowym dniu.
-dateTitle: Data i godzina
+initials: C&P
 date: 10 czerwca 2023
-time: '16:00'
-ceremony: Ceremonia Zaślubin
-ceremonyText: Sanktuarium Matki Bożej Pocieszenia w Biechowie
-reception: Przyjęcie Weselne
-receptionText: Pałac na Opieszynie, Września
-rsvpSection: Potwierdź obecność
-rsvpText: Prosimy o potwierdzenie obecności na naszym ślubie.
-rsvpName: 'Imię i nazwisko:'
-placeholder_rsvpNameText: Imię i nazwisko
-rsvpGuests: 'Liczba gości:'
-placeholder_rsvpGuestsText: ''
-message: 'Wiadomość:'
-placeholder_messageText: Wiadomość (opcjonalnie)
-value_submit: Wyślij
-languageNav: Język
+date_noComma: 10 czerwca 2023
+address: Września
+address_noComma: Września
+nav:
+  home: Strona Główna
+  story: Jak się poznaliśmy
+  rsvp: RSVP
+  en: English
+  pl: Polski
+  kr: 한국어
+  language: Języki
+title: Pobieramy się!
+time: 16.00
+ceremony:
+  title: Ceremonia Zaślubin
+  name: The Sanctuary of Our Lady of Consolation
+  address: Biechowo
+reception:
+  title: Przyjęcie Weselne
+  name: Pałac na Opieszynie
+  address: Opieszyn 1
