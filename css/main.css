@@ -1,5 +1,7 @@
 body {
   font-family: "EB Garamond", serif;
+  max-width: 2000px;
+
 }
 section {
   padding: 2rem 1rem;
@@ -8,9 +10,10 @@ section {
   outline: 2px solid brown; */
 }
 
-.cover {
+img.cover {
   height: 450px;
   width: 100%;
+  object-position: center 20%;
 }
 
 .poi {
@@ -23,6 +26,10 @@ section {
   align-items: center;
   justify-content: space-evenly;
   margin: auto;
+}
+
+.timeline .container:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .timeline .container img {

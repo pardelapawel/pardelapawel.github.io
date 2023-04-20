@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html data-attr-t="" lang-t="language_name">
+  <head>
+    <title>C&amp;P Wedding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/595feebb49.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="text-gray-700 text-center m-auto">
+    <header>
+      <div id="flowerTop" class="bg-blue-200 h-44 my-14"></div>
+      <h1 class="uppercase text-6xl my-5 tracking-widest" data-t="">names</h1>
+      <div class="uppercase inline-block text-lg/8 tracking-widest">
+        <p class="inline mx-1" data-t="">date</p>
+        <p class="inline mx-1" data-t="">•</p>
+        <p class="inline mx-1" data-t="">address</p>
+        <div id="day-counter" class="center"></div>
+      </div>
+    </header>
+    <nav class="mt-16">
+      <ul class="flex gap-10 justify-center text-lg italic">
+        <li><a href="#home" data-t="">nav.home</a></li>
+        <li><a href="#story" data-t="">nav.story</a></li>
+        <li><a href="#rsvp" data-t="">nav.rsvp</a></li>
+        <li><a href="/i18n" data-t="">nav.en</a></li>
+        <li><a href="/i18n/pl" data-t="">nav.pl</a></li>
+        <li><a href="/i18n/ko" data-t="">nav.ko</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div>
+        <img class="cover object-cover" src="public/fotofEiL_-16.jpg" alt="" />
+      </div>
+      <div
+        class="flex uppercase justify-center items-center object-center w-full text-4xl tracking-widest my-20"
+      >
+        <p class="flex w-80 border-r-2 border-s-gray-500" data-t="">date</p>
+        <p class="flex w-80" data-t="">address</p>
+      </div>
+    </section>
+    <section id="poi">
+      <div class="poi">
+        <p class="text-lg uppercase my-2" data-t="">ceremony.title</p>
+        <p class="text-lg" data-t="">ceremony.name</p>
+        <span>
+          <i
+            class="p-2 fa-regular fa-map-location-dot fa-2xl"
+            style="font-family: fontawesome"
+          ></i>
+          <span class="text-lg" data-t="">ceremony.address</span>
+        </span>
+      </div>
+      <div class="poi">
+        <p class="text-lg uppercase my-2" data-t="">reception.title</p>
+        <p class="text-lg" data-t="">reception.name</p>
+        <span>
+          <i
+            class="p-2 fa-regular fa-map-location-dot fa-2xl"
+            style="font-family: fontawesome"
+          ></i>
+          <span class="text-lg" data-t="">reception.address</span>
+        </span>
+      </div>
+    </section>
+
+    <section id="story">
+      <h2 class="text-3xl">Our story</h2>
+      <div id="timeline" class="timeline m-auto"></div>
+    </section>
+
+    <footer class="my-20">
+      <div class="w-48 flex-col justify-center m-auto footer-logo">
+        <p class="text-6xl" data-t="">initials</p>
+        <hr class="my-2" />
+        <p data-t="">date</p>
+      </div>
+      <div class="bottom-flower m-8">
+        <div class="h-20 bg-slate-400"></div>
+      </div>
+    </footer>
+
+    <script>
+      langCookieKey = "chaewon_pawel_language";
+      console.log(document.documentElement.lang);
+      console.log(localStorage.getItem(langCookieKey));
+      console.log(navigator.language);
+      console.log(navigator.userLanguage);
+      userLang =
+        document.documentElement.lang ||
+        localStorage.getItem(langCookieKey) ||
+        navigator.language ||
+        navigator.userLanguage ||
+        "en";
+      userLang = userLang.split("-")[0];
+      if (!["en", "pl", "ko"].includes(userLang)) {
+        userLang = "en";
+      }
+      const theDate = new Date("June 10, 2023");
+      const today = new Date();
+      const diffTime = Math.abs(theDate - today);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      let text = "";
+      if (diffDays >= 0) {
+        if (diffDays > 1) {
+          text = {
+            en: `${diffDays} days to go!`,
+            pl: `jeszcze ${diffDays} dni!`,
+            ko: `${diffDays} 일 후!`,
+          }[userLang];
+        } else if (diffDays == 0) {
+          text = { en: "today", pl: "dziś", ko: "오늘" }[userLang];
+        } else {
+          text = { en: "tomorrow", pl: "jutro", ko: "내일" }[userLang];
+        }
+      }
+      document.getElementById("day-counter").innerHTML = text;
+
+      Array.from(document.getElementsByClassName('date'))
+        .map(el => {
+            let text = el.innerHTML,
+                [day, month, year] = text.split('.'),
+                date = new Date(Date.UTC(year, month, day));
+                intDate = new Intl.DateTimeFormat(userLang, {
+                    dateStyle: 'full',
+                    timeZone: 'Europe/Warsaw'
+                }).format(date)
+            el.innerHTML = intDate
+        })
+    </script>
+  </body>
+</html>
