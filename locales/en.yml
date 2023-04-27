@@ -27,3 +27,14 @@ reception:
 story:
   firstSelfie: First selfie together
   firstTrip: First trip to Chuncheon
+rsvp:
+  text: Please let us know if you can make it to our wedding.
+  name:
+    label: Name
+    placeholder: Your Name
+  guest:
+    label: Number of guests
+    placeholder:
+  message:
+    label: Message to us
+    placeholder: Your message (optional)

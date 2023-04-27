@@ -8,7 +8,15 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        'bg-col': '#FCF7E7',
+        'bg-acc': '#f7edca',
+        text: '#464440',
+        'text-acc': '#9A8A74',
+        drawing: '#B8B4A9'
+      }
+    },
   },
   plugins: [],
 }

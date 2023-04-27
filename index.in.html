@@ -3,7 +3,11 @@
   <head>
     <title>C&amp;P Wedding</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;Noto+Serif+KR:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+KR:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -12,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="text-gray-700 text-center m-auto">
+  <body class="text-text bg-bg-col text-center m-auto">
     <header>
       <div id="flowerTop" class="bg-blue-200 h-44 my-14"></div>
       <h1 class="uppercase text-6xl my-5 tracking-widest" data-t="">names</h1>
@@ -71,9 +75,54 @@
     </section>
 
     <section id="story">
-      <h2 class="text-3xl">Our story</h2>
-      <div id="timeline" class="timeline m-auto"></div>
+      <h2 class="text-3xl" data-t>nav.story</h2>
+      <div id="timeline" class="m-auto my-10 italic max-w-3xl">
+        <div class="timeline-entry">
+          <img src="public/2017.05.09_firstSelfie" />
+          <div class="description">
+            <p class="date">Friday, June 9, 2017</p>
+            <p class="description">First selfie together</p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="rsvp" class="m-auto">
+      <h2 class="text-3xl" data-t>nav.rsvp</h2>
+      <p id="rsvpText" data-t>rsvp.text</p>
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="flex flex-col gap-2 items-center"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="0efb20f4-8a16-457f-856b-b5fe764a3430"
+        />
+        <div class="fieldWrapper flex flex-col">
+          <input class="input" placeholder=" " type="text" id="rsvpNameText" name="name" required/>
+          <label class="placeholder" id="rsvpName" for="rsvpNameText" data-t>rsvp.name.label</label>
+        </div>
+        <div class="fieldWrapper flex flex-col">
+          <input class="input" placeholder=" " type="text" id="rsvpGuestsText" name="rsvpGuestsText"/>
+          <label class="placeholder" id="rsvpGuests" for="rsvpGuestsText" data-t>rsvp.guest.label</label>
+        </div>
+        <div class="fieldWrapper flex flex-col">
+          <textarea class="input" placeholder=" " name="messageText" id="messageText" cols="30" rows="4"></textarea>
+          <label class="placeholder" id="message" for="messageText" data-t>rsvp.message.label</label>
+        </div>
+        <!-- <input id="submit" type="submit" value="Submit" class="button" /> -->
+        <button
+          data-t
+          class="submit w-min bg-bg-acc hover:bg-drawing text-text font-bold p-4 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+        >
+          submit
+        </button>
+      </form>
+    </section>
+
 
     <footer class="my-20">
       <div class="w-48 flex-col justify-center m-auto footer-logo">
@@ -122,17 +171,16 @@
       }
       document.getElementById("day-counter").innerHTML = text;
 
-      Array.from(document.getElementsByClassName('date'))
-        .map(el => {
-            let text = el.innerHTML,
-                [day, month, year] = text.split('.'),
-                date = new Date(Date.UTC(year, month, day));
-                intDate = new Intl.DateTimeFormat(userLang, {
-                    dateStyle: 'full',
-                    timeZone: 'Europe/Warsaw'
-                }).format(date)
-            el.innerHTML = intDate
-        })
+      Array.from(document.getElementsByClassName("date")).map((el) => {
+        let text = el.innerHTML,
+          [day, month, year] = text.split("."),
+          date = new Date(Date.UTC(year, month, day));
+        intDate = new Intl.DateTimeFormat(userLang, {
+          dateStyle: "long",
+          timeZone: "Europe/Warsaw",
+        }).format(date);
+        el.innerHTML = intDate;
+      });
     </script>
   </body>
 </html>

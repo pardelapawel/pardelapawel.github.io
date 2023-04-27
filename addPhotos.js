@@ -50,9 +50,11 @@ const pictures = fs.readdirSync(picturesDir)
             description = dom.window.document.createElement('div'),
             date = dom.window.document.createElement('p'),
             description_p = dom.window.document.createElement('p')
-        container.className = 'container'
+            dot = dom.window.document.createElement('div')
+        container.className = 'timeline-entry'
         description.className = 'description'
         date.className = 'date'
+        dot.className = 'dot'
         description_p.className = 'description'
         img.setAttribute('src', path.join('public', filename));
         date.innerHTML = `${day}.${month}.${year}`
@@ -60,6 +62,7 @@ const pictures = fs.readdirSync(picturesDir)
         description_p.setAttribute('data-t', '')
         
         container.appendChild(img)
+        container.appendChild(dot)
         container.appendChild(description)
         description.appendChild(date)
         description.appendChild(description_p)
