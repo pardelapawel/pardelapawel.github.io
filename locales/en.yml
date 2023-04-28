@@ -1,0 +1,52 @@
+---
+language_name: en
+names: Chaewon & Paweł
+initials: C&P
+date: June 10th, 2023
+date_noComma: June 10th 2023
+address: Września, Poland
+address_noComma: Września Poland
+backTagline: with love
+nav:
+  home: Home
+  story: Our Story
+  rsvp: RSVP
+  en: English
+  pl: Polski
+  ko: 한국어
+  language: Languages
+title: We are getting married!
+time: 4:00 PM
+ceremony:
+  title: Wedding Ceremony
+  name: The Sanctuary of Our Lady of Consolation
+  address: Biechowo
+reception:
+  title: Wedding Reception
+  name: Pałac na Opieszynie
+  address: Opieszyn 1
+story:
+  firstSelfie: First selfie together
+  firstTrip: First trip to Chuncheon
+  firstDate: First date
+  firstPoland: First visit in Poland
+  firstObiad: First obiad in Września
+  olympics: Observing Olympics
+  workingSuwon: Working in Suwon together
+  firstChristmas: First family Christmas
+  firstSki: First ski trip
+  firstFamilyTrip: First family trip
+  reunionPoland: Reunion amid global pandemic
+  civilWedding: Civil wedding at Kobierzyce
+rsvp:
+  text: Please let us know if you can make it to our wedding.
+  name:
+    label: Name
+    placeholder: Your Name
+  guest:
+    label: Number of guests
+    placeholder:
+  message:
+    label: Message to us
+    placeholder: Your message (optional)
+submit: Submit

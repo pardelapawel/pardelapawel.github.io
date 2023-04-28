@@ -1,0 +1,53 @@
+---
+language_name: ko
+names: 채원 & 파벨
+initials: C&P
+date: 2023년 6월 10일
+date_noComma: 2023년 6월 10일
+address: 폴란드, 브제스나
+address_noComma: "폴란드
+브제스나"
+backTagline: 사랑으로
+nav:
+  home: 홈
+  story: 우리 이야기
+  rsvp: 참석 의사 확인
+  en: English
+  pl: Polski
+  ko: 한국어
+  language: 언어
+title: 우리 결혼합니다!
+time: 오후 4시
+ceremony:
+  title: 결혼식
+  name: 위안의 성모 성전
+  address: 비에호보
+reception:
+  title: 웨딩 리셉션
+  name: 오피샨 궁전
+  address: 오피샨 1
+story:
+  firstSelfie: 처음 찍은 셀카
+  firstTrip: 처음 떠난 춘천 여행
+  firstDate: 첫 데이트
+  firstPoland: 폴란드에서 처음 만남
+  firstObiad: 처음 먹은 폴란드식 저녁 식사
+  olympics: 올림픽 관람
+  workingSuwon: 수원에서 함께 일하기
+  firstChristmas: 첫 가족 크리스마스
+  firstSki: 첫 스키 여행
+  firstFamilyTrip: 첫 가족 여행
+  reunionPoland: 세계적인 대유행 속에서의 가족 재회
+  civilWedding: 코비에르지체에서의 민사 결혼식
+rsvp:
+  text: 저희 결혼식에 참석하실 수 있으신지 알려주시겠어요?
+  name:
+    label: 이름
+    placeholder: 이름을 입력해주세요
+  guest:
+    label: 참석 인원
+    placeholder:
+  message:
+    label: 저희에게 남기실 말씀
+    placeholder: 메시지를 입력해주세요 (선택 사항)
+submit: 제출하기
