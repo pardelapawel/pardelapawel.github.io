@@ -1051,6 +1051,10 @@ img.cover {
   }
 }
 
+.button {
+  cursor: pointer;
+}
+
 .hover\:bg-drawing:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(184 180 169 / var(--tw-bg-opacity));

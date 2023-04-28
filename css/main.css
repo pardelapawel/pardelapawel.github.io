@@ -221,3 +221,7 @@ img.cover {
     .timeline-entry > .description { grid-area: 2 / 1 / 3 / 2; }
     
 }
+
+.button {
+  cursor: pointer;
+}
