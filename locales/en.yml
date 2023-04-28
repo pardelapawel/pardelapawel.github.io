@@ -6,6 +6,7 @@ date: June 10th, 2023
 date_noComma: June 10th 2023
 address: Września, Poland
 address_noComma: Września Poland
+backTagline: with love
 nav:
   home: Home
   story: Our Story
@@ -27,6 +28,16 @@ reception:
 story:
   firstSelfie: First selfie together
   firstTrip: First trip to Chuncheon
+  firstDate: First date
+  firstPoland: First visit in Poland
+  firstObiad: First obiad in Września
+  olympics: Observing Olympics
+  workingSuwon: Working in Suwon together
+  firstChristmas: First family Christmas
+  firstSki: First ski trip
+  firstFamilyTrip: First family trip
+  reunionPoland: Reunion amid global pandemic
+  civilWedding: Civil wedding at Kobierzyce
 rsvp:
   text: Please let us know if you can make it to our wedding.
   name:
@@ -38,3 +49,4 @@ rsvp:
   message:
     label: Message to us
     placeholder: Your message (optional)
+submit: Submit

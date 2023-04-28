@@ -4,23 +4,49 @@ names: Chaewon i Paweł
 initials: C&P
 date: 10 czerwca 2023
 date_noComma: 10 czerwca 2023
-address: Września
-address_noComma: Września
+address: Września, Polska
+address_noComma: Września Polska
+backTagline: z miłością
 nav:
-  home: Strona Główna
-  story: Jak się poznaliśmy
+  home: Strona główna
+  story: Nasza historia
   rsvp: RSVP
   en: English
   pl: Polski
   ko: 한국어
   language: Języki
-title: Pobieramy się!
-time: 16.00
+title: Wesele Chaewon i Pawła!
+time: 16:00
 ceremony:
-  title: Ceremonia Zaślubin
-  name: The Sanctuary of Our Lady of Consolation
+  title: Ceremonia ślubna
+  name: Sanktuarium Matki Bożej Pocieszenia
   address: Biechowo
 reception:
-  title: Przyjęcie Weselne
+  title: Przyjęcie weselne
   name: Pałac na Opieszynie
   address: Opieszyn 1
+story:
+  firstSelfie: Pierwsze selfie razem
+  firstTrip: Pierwsza wycieczka do Chuncheon
+  firstDate: Pierwsza randka
+  firstPoland: Pierwsza wizyta w Polsce
+  firstObiad: Pierwszy obiad we Wrześni
+  olympics: Oglądanie Olimpiady
+  workingSuwon: Praca w Suwon razem
+  firstChristmas: Pierwsze Boże Narodzenie z rodziną
+  firstSki: Pierwsza wycieczka na narty
+  firstFamilyTrip: Pierwsza wycieczka z rodziną
+  reunionPoland: Spotkanie w Polsce w czasie pandemii
+  civilWedding: Ślub cywilny w Kobierzycach
+rsvp:
+  text: Prosimy o potwierdzenie obecności na naszym weselu.
+  name:
+    label: Imię i nazwisko
+    placeholder: Twoje imię i nazwisko
+  guest:
+    label: Liczba gości
+    placeholder:
+  message:
+    label: Wiadomość dla nas
+    placeholder: Twoja wiadomość (opcjonalnie)
+submit: Wyślij

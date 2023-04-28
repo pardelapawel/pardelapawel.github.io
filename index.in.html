@@ -17,8 +17,10 @@
     ></script>
   </head>
   <body class="text-text bg-bg-col text-center m-auto">
-    <header>
-      <div id="flowerTop" class="bg-blue-200 h-44 my-14"></div>
+    <header class="items-center flex flex-col relative pt-32">
+      <div id="flowerTop" class="absolute -top-[50px]">
+        <img src="svn/g1078.svg" alt="" />
+      </div>
       <h1 class="uppercase text-6xl my-5 tracking-widest" data-t="">names</h1>
       <div class="uppercase inline-block text-lg/8 tracking-widest">
         <p class="inline mx-1" data-t="">date</p>
@@ -29,48 +31,48 @@
     </header>
     <nav class="mt-16">
       <ul class="flex gap-10 justify-center text-lg italic">
-        <li><a href="#home" data-t="">nav.home</a></li>
-        <li><a href="#story" data-t="">nav.story</a></li>
-        <li><a href="#rsvp" data-t="">nav.rsvp</a></li>
-        <li><a href="/i18n" data-t="">nav.en</a></li>
-        <li><a href="/i18n/pl" data-t="">nav.pl</a></li>
-        <li><a href="/i18n/ko" data-t="">nav.ko</a></li>
+        <li class="mobile:hidden"><a href="#home" data-t>nav.home</a></li>
+        <li class="mobile:hidden"><a href="#story" data-t>nav.story</a></li>
+        <li class="mobile:hidden"><a href="#rsvp" data-t>nav.rsvp</a></li>
+        <li><a href="/i18n" data-t>nav.en</a></li>
+        <li><a href="/i18n/pl" data-t>nav.pl</a></li>
+        <li><a href="/i18n/ko" data-t>nav.ko</a></li>
       </ul>
     </nav>
 
     <section id="home">
       <div>
-        <img class="cover object-cover" src="public/fotofEiL_-16.jpg" alt="" />
+        <img class="cover object-cover" src="public/cover.jpg" alt="" />
       </div>
       <div
         class="flex uppercase justify-center items-center object-center w-full text-4xl tracking-widest my-20"
       >
-        <p class="flex w-80 border-r-2 border-s-gray-500" data-t="">date</p>
-        <p class="flex w-80" data-t="">address</p>
+        <p class="flex w-80 mr-2 border-r-2 border-s-text-acc" data-t="">date_noComma</p>
+        <p class="flex w-80 pl-2 ml-2" data-t="">address_noComma</p>
       </div>
     </section>
     <section id="poi">
       <div class="poi">
         <p class="text-lg uppercase my-2" data-t="">ceremony.title</p>
         <p class="text-lg" data-t="">ceremony.name</p>
-        <span>
+        <a href="https://goo.gl/maps/J2Ao5xd9BxeaTF8R6" class="map">
           <i
             class="p-2 fa-regular fa-map-location-dot fa-2xl"
             style="font-family: fontawesome"
           ></i>
-          <span class="text-lg" data-t="">ceremony.address</span>
-        </span>
+          <span class="address text-lg" data-t="">ceremony.address</span>
+        </a>
       </div>
       <div class="poi">
         <p class="text-lg uppercase my-2" data-t="">reception.title</p>
         <p class="text-lg" data-t="">reception.name</p>
-        <span>
+        <a href="https://goo.gl/maps/LaWxPfE9PisEj92h8" class="map">
           <i
             class="p-2 fa-regular fa-map-location-dot fa-2xl"
             style="font-family: fontawesome"
           ></i>
-          <span class="text-lg" data-t="">reception.address</span>
-        </span>
+          <span class="address text-lg" data-t="">reception.address</span>
+        </a>
       </div>
     </section>
 
@@ -93,7 +95,7 @@
       <form
         action="https://api.web3forms.com/submit"
         method="POST"
-        class="flex flex-col gap-2 items-center"
+        class="flex flex-col gap-2 items-center p-4"
       >
         <input
           type="hidden"
@@ -101,37 +103,68 @@
           value="0efb20f4-8a16-457f-856b-b5fe764a3430"
         />
         <div class="fieldWrapper flex flex-col">
-          <input class="input" placeholder=" " type="text" id="rsvpNameText" name="name" required/>
-          <label class="placeholder" id="rsvpName" for="rsvpNameText" data-t>rsvp.name.label</label>
+          <input
+            class="input"
+            placeholder=" "
+            type="text"
+            id="rsvpNameText"
+            name="name"
+            required
+          />
+          <label class="placeholder" id="rsvpName" for="rsvpNameText" data-t
+            >rsvp.name.label</label
+          >
+          <span class="error-msg" id="rsvpNameTextErr"></span>
         </div>
         <div class="fieldWrapper flex flex-col">
-          <input class="input" placeholder=" " type="text" id="rsvpGuestsText" name="rsvpGuestsText"/>
-          <label class="placeholder" id="rsvpGuests" for="rsvpGuestsText" data-t>rsvp.guest.label</label>
+          <input
+            class="input"
+            placeholder=" "
+            type="text"
+            id="rsvpGuestsText"
+            name="rsvpGuestsText"
+          />
+          <label class="placeholder" id="rsvpGuests" for="rsvpGuestsText" data-t
+            >rsvp.guest.label</label
+          >
         </div>
         <div class="fieldWrapper flex flex-col">
-          <textarea class="input" placeholder=" " name="messageText" id="messageText" cols="30" rows="4"></textarea>
-          <label class="placeholder" id="message" for="messageText" data-t>rsvp.message.label</label>
+          <textarea
+            class="input"
+            placeholder=" "
+            name="messageText"
+            id="messageText"
+            cols="30"
+            rows="4"
+          ></textarea>
+          <label class="placeholder" id="message" for="messageText" data-t
+            >rsvp.message.label</label
+          >
         </div>
         <!-- <input id="submit" type="submit" value="Submit" class="button" /> -->
         <button
           data-t
           class="submit w-min bg-bg-acc hover:bg-drawing text-text font-bold p-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
-        >
-          submit
-        </button>
+          aria-disabled="true"
+          aria-describedby="rsvpNameTextErr"
+        >submit</button>
       </form>
     </section>
 
-
-    <footer class="my-20">
+    <footer class="py-10 relative">
       <div class="w-48 flex-col justify-center m-auto footer-logo">
         <p class="text-6xl" data-t="">initials</p>
         <hr class="my-2" />
-        <p data-t="">date</p>
+        <p data-t>backTagline</p>
       </div>
-      <div class="bottom-flower m-8">
-        <div class="h-20 bg-slate-400"></div>
+      <div
+        class="bottom-flower relative flex items-end justify-center -bottom-20"
+      >
+        <img src="svn/g54.svg" alt="" class="absolute left-1/3" />
+        <img src="svn/g1550.svg" alt="" class="absolute right-1/3" />
+        <img src="svn/g714.svg" alt="" class="fixed -left-5 bottom-0" />
+        <img src="svn/g866.svg" alt="" class="fixed -right-2 bottom-10" />
       </div>
     </footer>
 
