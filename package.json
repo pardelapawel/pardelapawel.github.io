@@ -15,7 +15,7 @@
   },
   "scripts": {
     "2build": "echo foo",
-    "build": "(node ./addPhotos.js index.in.html index.html --id timeline --picturesdir i18n/public && tailwindcss -i ./css/main.css -o ./i18n/main.css && static-i18n --fileFormat yml -l en -i en -i pl -i ko . --files index.html -o i18n)",
+    "build": "(node ./addPhotos.js index.in.html index.html --id timeline --picturesdir public && tailwindcss -i ./css/main.css -o ./main.css && static-i18n --fileFormat yml -l en -i en -i pl -i ko . --files index.html -o ./)",
     "start": "nodemon --exec 'npm run build' --watch package.json --watch css/main.css --watch index.in.html --watch locales/en.yml --watch locales/pl.yml --watch locales/ko.yml --watch addPhotos.js --watch tailwind.config.js"
   },
   "devDependencies": {
