@@ -2,19 +2,10 @@
 <html data-attr-t="" lang-t="language_name">
   <head>
     <title>C&amp;P Wedding</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;Noto+Serif+KR:wght@400;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+KR:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;Noto+Serif+KR:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <script
-      src="https://kit.fontawesome.com/595feebb49.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/595feebb49.js" crossorigin="anonymous"></script>
   </head>
   <body class="text-text bg-bg-col text-center m-auto">
     <header class="items-center flex flex-col relative pt-32">
@@ -44,9 +35,7 @@
       <div>
         <img class="cover object-cover" src="public/cover.jpg" alt="" />
       </div>
-      <div
-        class="flex uppercase justify-center items-center object-center w-full text-4xl tracking-widest my-20"
-      >
+      <div class="flex uppercase justify-center items-center object-center w-full text-4xl tracking-widest my-20">
         <p class="flex w-80 mr-2 border-r-2 border-s-text-acc" data-t="">date_noComma</p>
         <p class="flex w-80 pl-2 ml-2" data-t="">address_noComma</p>
       </div>
@@ -56,10 +45,7 @@
         <p class="text-lg uppercase my-2" data-t="">ceremony.title</p>
         <p class="text-lg" data-t="">ceremony.name</p>
         <a href="https://goo.gl/maps/J2Ao5xd9BxeaTF8R6" class="map">
-          <i
-            class="p-2 fa-regular fa-map-location-dot fa-2xl"
-            style="font-family: fontawesome"
-          ></i>
+          <i class="p-2 fa-regular fa-map-location-dot fa-2xl" style="font-family: fontawesome"></i>
           <span class="address text-lg" data-t="">ceremony.address</span>
         </a>
       </div>
@@ -67,10 +53,7 @@
         <p class="text-lg uppercase my-2" data-t="">reception.title</p>
         <p class="text-lg" data-t="">reception.name</p>
         <a href="https://goo.gl/maps/LaWxPfE9PisEj92h8" class="map">
-          <i
-            class="p-2 fa-regular fa-map-location-dot fa-2xl"
-            style="font-family: fontawesome"
-          ></i>
+          <i class="p-2 fa-regular fa-map-location-dot fa-2xl" style="font-family: fontawesome"></i>
           <span class="address text-lg" data-t="">reception.address</span>
         </a>
       </div>
@@ -89,58 +72,41 @@
       </div>
     </section>
 
-    <section id="rsvp" class="m-auto">
+    <section id="rsvp" class="flex flex-col items-center">
       <h2 class="text-3xl" data-t>nav.rsvp</h2>
       <p id="rsvpText" data-t>rsvp.text</p>
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        class="flex flex-col gap-2 items-center p-4"
-      >
-        <input
-          type="hidden"
-          name="access_key"
-          value="0efb20f4-8a16-457f-856b-b5fe764a3430"
-        />
-        <div class="fieldWrapper flex flex-col">
-          <input
-            class="input"
-            placeholder=" "
-            type="text"
-            id="rsvpNameText"
-            name="name"
-            required
-          />
-          <label class="placeholder" id="rsvpName" for="rsvpNameText" data-t
-            >rsvp.name.label</label
-          >
-          <span class="error-msg" id="rsvpNameTextErr"></span>
+      <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-2 items-center p-4 text-left w-80">
+        <!-- <input type="hidden" name="access_key" value="0efb20f4-8a16-457f-856b-b5fe764a3430" /> -->
+        <!-- <div class="fieldWrapper flex flex-col">
+          <input class="input" placeholder=" " type="text" id="rsvpNameText" name="name" required />
+          <label class="placeholder" id="rsvpName" for="rsvpNameText" data-t>rsvp.name.label</label>
         </div>
         <div class="fieldWrapper flex flex-col">
-          <input
-            class="input"
-            placeholder=" "
-            type="text"
-            id="rsvpGuestsText"
-            name="rsvpGuestsText"
-          />
-          <label class="placeholder" id="rsvpGuests" for="rsvpGuestsText" data-t
-            >rsvp.guest.label</label
-          >
+          <input class="input" placeholder=" " type="text" id="rsvpGuestsText" name="rsvpGuestsText" />
+          <label class="placeholder" id="rsvpGuests" for="rsvpGuestsText" data-t>rsvp.guest.label</label>
+        </div> -->
+
+        <div class="relative w-full z-0 mb-6 group">
+          <input type="text" name="rsvpName" id="rsvpName" class="block py-2.5 px-0 w-full text-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-text-acc peer" placeholder=" " required />
+          <label for="floating_email" aria-describedby="rsvpNameHelper" class="peer-focus:font-medium absolute text-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-text-acc peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" data-t>rsvp.name.label</label>
+          <p id="rsvpNameHelper" class="mt-2 text-gray-500 text-sm" data-t>rsvp.name.helper</p>
         </div>
-        <div class="fieldWrapper flex flex-col">
-          <textarea
-            class="input"
-            placeholder=" "
-            name="messageText"
-            id="messageText"
-            cols="30"
-            rows="4"
-          ></textarea>
-          <label class="placeholder" id="message" for="messageText" data-t
-            >rsvp.message.label</label
-          >
+        <div class="relative w-full z-0 mb-6 group">
+          <input type="text" name="rsvpGuests" id="rsvpGuests" class="block py-2.5 px-0 w-full text-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-text-acc peer" placeholder=" "/>
+          <label for="rsvpGuests" aria-describedby="rsvpGuestHelper" class="peer-focus:font-medium absolute text-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-text-acc peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" data-t>rsvp.guest.label</label>
+          <p id="rsvpGuestHelper" class="mt-2 text-gray-500" data-t>rsvp.guest.helper</p>
         </div>
+        <div class="relative w-full z-0 mb-6 group">
+          <textarea id="message" rows="4" class="block py-2.5 px-0 w-full text-text bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-text-acc peer" placeholder=" "></textarea>
+          <label for="message" aria-describedby="rsvpTextHelper" class="peer-focus:font-medium absolute text-text duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-text-acc peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" data-t>rsvp.message.label</label>
+          <p id="rsvpTextHelper" class="mt-2 text-gray-500 text-sm" data-t>rsvp.message.helper</p>
+        </div>
+
+
+        <!-- <div class="fieldWrapper flex flex-col">
+          <textarea class="input" placeholder=" " name="messageText" id="messageText" cols="30" rows="4"></textarea>
+          <label class="placeholder" id="message" for="messageText" data-t>rsvp.message.label</label>
+        </div> -->
         <input id="submit" data-attr-t value-t="submit" class="button submit w-min bg-bg-acc hover:bg-drawing text-text font-bold p-4 rounded focus:outline-none focus:shadow-outline" type="submit" />
       </form>
     </section>
@@ -151,9 +117,7 @@
         <hr class="my-2" />
         <p data-t>backTagline</p>
       </div>
-      <div
-        class="bottom-flower relative flex items-end justify-center -bottom-20"
-      >
+      <div class="bottom-flower relative flex items-end justify-center -bottom-20">
         <img src="svn/g54.svg" alt="" class="absolute left-1/3" />
         <img src="svn/g1550.svg" alt="" class="absolute right-1/3" />
         <img src="svn/g714.svg" alt="" class="fixed -left-5 bottom-0" />
@@ -167,12 +131,7 @@
       console.log(localStorage.getItem(langCookieKey));
       console.log(navigator.language);
       console.log(navigator.userLanguage);
-      userLang =
-        document.documentElement.lang ||
-        localStorage.getItem(langCookieKey) ||
-        navigator.language ||
-        navigator.userLanguage ||
-        "en";
+      userLang = document.documentElement.lang || localStorage.getItem(langCookieKey) || navigator.language || navigator.userLanguage || "en";
       userLang = userLang.split("-")[0];
       if (!["en", "pl", "ko"].includes(userLang)) {
         userLang = "en";

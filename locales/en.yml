@@ -42,11 +42,11 @@ rsvp:
   text: Please let us know if you can make it to our wedding.
   name:
     label: Name
-    placeholder: Your Name
+    helper: Required
   guest:
     label: Number of guests
-    placeholder:
+    helper: ""
   message:
     label: Message to us
-    placeholder: Your message (optional)
+    helper: Notes, questions, your email, dietary options, etc.
 submit: Submit
