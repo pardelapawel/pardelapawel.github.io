@@ -200,7 +200,7 @@
       Array.from(document.getElementsByClassName("date")).map((el) => {
         let text = el.innerHTML,
           [day, month, year] = text.split("."),
-          date = new Date(Date.UTC(year, month, day));
+          date = new Date(Date.UTC(year, month - 1, day));
         intDate = new Intl.DateTimeFormat(userLang, {
           dateStyle: "long",
           timeZone: "Europe/Warsaw",
